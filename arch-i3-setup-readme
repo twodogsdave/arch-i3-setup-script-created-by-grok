@@ -88,3 +88,10 @@ Vencord is provided via vesktop (most reliable method in 2026).
 Limine is installed as a package; you may still need a one-time manual deployment depending on how you installed the base system (see ArchWiki Limine page).
 
 After first login, run set-wallpaper /path/to/image.jpg to apply a wallpaper + pywal colors.
+
+script download:
+
+https://github.com/twodogsdave/arch-i3-setup-script-created-by-grok/blob/main/arch-i3-setup-readme
+
+https://github.com/twodogsdave/arch-i3-setup-script-created-by-grok/blob/main/arch-i3-setup.sh
+
