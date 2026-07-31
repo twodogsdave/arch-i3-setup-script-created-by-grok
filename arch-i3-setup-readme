@@ -91,7 +91,7 @@ After first login, run set-wallpaper /path/to/image.jpg to apply a wallpaper + p
 
 script download:
 
-wget -c https://github.com/twodogsdave/arch-i3-setup-script-created-by-grok/blob/main/arch-i3-setup-readme
+wget -c https://raw.githubusercontent.com/twodogsdave/arch-i3-setup-script-created-by-grok/refs/heads/main/arch-i3-setup-readme
 
 wget -c https://raw.githubusercontent.com/twodogsdave/arch-i3-setup-script-created-by-grok/refs/heads/main/arch-i3-setup.sh
 
