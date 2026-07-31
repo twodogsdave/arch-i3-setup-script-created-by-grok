@@ -1,0 +1,1 @@
+# arch-i3-setup-script-created-by-grok
