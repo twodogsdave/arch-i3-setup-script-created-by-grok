@@ -1,0 +1,90 @@
+What the script will do (high level)
+
+Safety checks – confirm you’re root, on Arch, have internet, etc.
+System update + install yay (AUR helper).
+Core system packages (Xorg, fonts, tools, etc.).
+NVIDIA stack (nvidia-open-dkms + utils + prime + settings).
+Audio – full PipeWire + WirePlumber + Bluetooth support.
+Printing – CUPS + HPLIP (HP printers).
+Window manager stack
+i3-wm + i3status (we’ll replace status with polybar)
+polybar (Archcraft-style)
+rofi
+dunst
+picom (with rounded corners, blur, transparency)
+nitrogen + pywal
+thunar + plugins
+ghostty + JetBrainsMono Nerd Font
+Qogir GTK theme + icons + cursor
+
+Display manager – SDDM + a clean theme, enabled via systemd.
+Bootloader – Limine + set TTY font to ter-122b.
+All the applications you listed (Steam, Spotify, Vencord, MPD stack, GIMP, etc.).
+Create fully documented configs for:
+~/.config/i3/config (well-commented keybinds)
+polybar
+picom
+dunst
+rofi
+ghostty
+
+Enable services (sddm, bluetooth, cups, tlp, etc.).
+Final touches – pywal setup, wallpaper folder, etc.
+
+A few things I’ll include that you didn’t explicitly list (recommended)
+
+networkmanager + network-manager-applet (even with wired, very useful)
+brightnessctl + playerctl (so volume/brightness media keys work cleanly on polybar)
+xdg-user-dirs + xdg-utils
+polkit-gnome (for graphical authentication)
+lxsession or xfce4-session bits if needed for Thunar/SDDM
+ttf-jetbrains-mono-nerd + Noto fonts
+Some sci-fi wallpapers (I’ll download a few good ones)
+fastfetch, btop, nvtop, etc. as requested
+
+Confirmed — those are already on the list and will be included:
+
+steam
+minecraft-launcher
+openspades-git (AUR)
+spotify
+
+They’re high priority and will be installed properly (Steam with the necessary 32-bit libraries, etc.).
+Anything else you want to add or change before I write the full script?
+If not, just say “write the script” and I’ll generate the complete, well-commented bash script.
+
+How to use it
+
+Finish a minimal Arch install (base system + linux kernel + firmware + wired network).
+Boot into the new system and get root/sudo access.
+Copy the script to the machine (USB, scp, etc.).
+Run it:
+
+Bashchmod +x arch-i3-setup.sh
+sudo ./arch-i3-setup.sh
+
+What it installs / configures
+1 System update, multilib, yay
+2 NVIDIA open-dkms + utils + prime (correct for RTX 5080)
+3 Full Xorg stack
+4 PipeWire + Bluetooth
+5 CUPS + HPLIP (HP printers)
+6 Fonts (JetBrains Mono Nerd + Noto) + ter-122b TTY font
+7 i3 + polybar + rofi + dunst + picom + thunar + nitrogen + etc.
+8 Qogir GTK theme, icons, cursor
+9 SDDM + sugar-candy theme
+1 0Limine package
+11 TLP
+12 All your apps: Steam, Spotify, Minecraft, OpenSpades, Firefox, GIMP, MPD stack, vesktop (Vencord), etc.
+13 Fully documented configs for i3, polybar, picom (rounded corners + blur), dunst, rofi, ghostty
+14 Wallpaper folder + set-wallpaper helper (uses nitrogen + pywal)
+15 Final groups, .xinitrc fallback, etc.
+
+Important notes
+
+Rounded corners are handled by picom (corner-radius = 12).
+Volume & brightness keys are bound in the i3 config and also appear on polybar.
+Vencord is provided via vesktop (most reliable method in 2026).
+Limine is installed as a package; you may still need a one-time manual deployment depending on how you installed the base system (see ArchWiki Limine page).
+
+After first login, run set-wallpaper /path/to/image.jpg to apply a wallpaper + pywal colors.
